@@ -1,0 +1,232 @@
+# AUFGABEN UM SQL BEGRIFFE
+
+In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
+
+## Such dir die Definitionen und Bedeutungen zu den folgenden Begriffen:
+
+1. **Datenbank**
+
+    Ist eine strukturierte Sammlung von Daten, 
+    die elektronisch gespeichert und verwaltet werden.
+
+2. **SQL**
+
+    Structured Query Language – ist eine standardisierte Sprache 
+                                zur Verwaltung und Abfrage 
+                                von relationalen Datenbanken.
+
+
+3. **NoSQL**
+
+    Sind Datenbanksysteme, 
+    die nicht (nur) auf dem relationalen Modell basieren, 
+    sondern z.B. dokumenten-, key-value-, graph- oder spaltenorientiert sind.
+
+
+4. **Was ist der Hauptunterschied zwischen SQL und NoSQL?**
+
+    SQL-Datenbanken sind relational und nutzen Tabellen mit festen Schemata. 
+    
+    NoSQL-Datenbanken sind oft schemalos und für große, 
+    flexible Datenmengen optimiert.
+
+
+5. **Abfrage (Query)**
+
+    Ein Befehl, 
+    mit dem Daten aus einer Datenbank gelesen, 
+    geändert oder gelöscht werden.
+
+
+6. **ERD (Entity-Relationship-Diagramm)**
+
+   - Was ist ein ERD?
+
+     Ein Diagramm, 
+     das die Beziehungen zwischen Datenbankobjekten (Tabellen/Entitäten) 
+     grafisch darstellt.
+    
+
+   - Wie sieht ein ERD aus?
+
+     Es zeigt Kästchen (Entitäten) 
+     und Linien (Beziehungen) zwischen ihnen.
+    
+
+   - Wozu wird ein ERD verwendet?
+
+     Zur Planung und Visualisierung der Datenbankstruktur.
+    
+
+7. **Flowcharts**
+
+
+   - Was ist ein Flowchart?
+
+     Ein Diagramm, das Abläufe und Prozesse grafisch darstellt.
+    
+   - Wie sieht ein Flowchart aus?
+
+     Es besteht aus Symbolen (z.B. Rechtecke, Rauten) und Pfeilen, 
+     die den Ablauf zeigen.    
+
+   - Wozu wird ein Flowchart verwendet?
+
+     Zur Visualisierung von Prozessen, Algorithmen oder Workflows.
+
+
+8. **RDBMS (Relational Database Management System)**
+
+    Es ist ein System zur Verwaltung relationaler Datenbanken, 
+    wie z.B. 
+    
+    - MySQL, 
+    - PostgreSQL, 
+    - Oracle.
+
+
+9. Was ist den unterschied zwischen einem RDBMS und ein DBMS? 
+   Kanst du Beispiele nennen?
+
+
+    RDBMS ist speziell für relationale Datenbanken.  
+
+        Bsp.:   - RDBMS: MySQL, PostgreSQL
+
+    DBMS ist ein allgemeines Datenbankverwaltungssystem (z.B. auch für NoSQL). 
+    
+        Bsp.:   - DBMS: MongoDB, Redis  
+
+
+
+10. **PostgreSQL** 
+    "Postgres Structured Query Language"
+
+    Ist ein 
+    
+    leistungsfähiges, 
+    freies, 
+    objektrelationales 
+    
+    Datenbankmanagementsystem.
+
+
+
+11. **psql**
+
+    Das Kommandozeilen-Tool 
+    zur Verwaltung und Abfrage 
+    von PostgreSQL-Datenbanken.
+
+
+## SQL-Befehle
+
+11. **SELECT**
+
+    Wählt Daten aus einer Tabelle aus.
+
+
+12. **INSERT**
+
+    Fügt neue Daten in eine Tabelle ein.
+
+
+13. **FROM**
+
+    Gibt die Tabelle an, 
+    aus der Daten ausgewählt werden.
+
+14. **WHERE**
+
+    Filtert die Daten nach bestimmten Bedingungen.
+
+
+15. Was ist ein **Primärschlüssel (Primary Key)**?
+
+    Eine Spalte (oder mehrere), 
+    die jeden Datensatz eindeutig identifiziert.
+
+
+## SQL-Befehle zum Verändern der Datenbankstruktur
+
+16. **CREATE TABLE** - Was macht dieser Befehl?
+
+    Erstellt eine neue Tabelle in der Datenbank.
+
+
+17. **ALTER TABLE** - Was macht dieser Befehl?
+
+    Ändert die Struktur einer bestehenden Tabelle (z.B. Spalten hinzufügen).
+
+
+
+18. **DROP TABLE** - Was macht dieser Befehl?
+
+    Löscht eine Tabelle und alle darin enthaltenen Daten.
+
+
+
+19. Wie kann ich eine Tabelle mit SQL erstellen mit den Spalten:
+    
+    - id (Integer, Primärschlüssel)
+    
+    - titel (Text)
+    
+    - author (Text)
+    
+    - jahr (Integer)
+
+    ```sql
+        CREATE TABLE buecher (
+        id INTEGER PRIMARY KEY,
+        titel TEXT,
+        author TEXT,
+        jahr INTEGER
+        );
+```
+
+
+20. Wie kann ich eine Spalte zu einer bestehenden Tabelle hinzufügen?
+
+```sql
+        ALTER TABLE buecher ADD COLUMN genre TEXT;
+```
+
+    
+21. Wie kann ich mehrere Spalten zu einer bestehenden Tabelle hinzufügen?
+
+```sql
+        ALTER TABLE buecher
+        ADD COLUMN verlag TEXT,
+        ADD COLUMN preis NUMERIC;
+```
+(Bei manchen Systemen muss jede Spalte einzeln hinzugefügt werden.)
+
+
+22. Wie kann ich alle Daten aus einer Tabelle anzeigen lassen?
+
+```sql
+        SELECT * FROM buecher;
+```
+
+23. Wie kann ich bestimmte Daten aus einer Tabelle anzeigen lassen z.B. nur die Titel und Autoren?
+
+```sql
+        SELECT titel, author FROM buecher;
+```
+
+
+## Selbststudium Ressourcen:
+
+- [W3Schools SQL Tutorial](https://www.w3schools.com/sql/)
+
+- [SQL Playground](https://pg-sql.com/)
+
+- [PostgreSQL Tutorial](https://neon.com/postgresql/postgresql-getting-started)
+
+- [ERD mit draw.io](https://www.youtube.com/watch?v=lAtCySGDD48)
+
+
+
+
+Für weitere Infos siehe die verlinkten Ressourcen!
