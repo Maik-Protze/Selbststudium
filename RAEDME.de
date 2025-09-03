@@ -1,3 +1,5 @@
+Aufgabe 02092025
+
 # AUFGABEN UM SQL BEGRIFFE
 
 In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
@@ -230,3 +232,93 @@ In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
 
 
 Für weitere Infos siehe die verlinkten Ressourcen!
+
+
+
+
+Aufgabe 03092025
+
+# Aufgabe 1
+
+Diese Übung dient dazu, grundlegende SQL-Abfragen zu üben.
+
+Deine Aufgabe ist es, eine Tabelle für die Speicherung von Daten über Bücher vorzubereiten und einige Daten einzufügen. Zeichne deine Abfragen und Antworten in der Datei `task-1-books.sql` auf. Folge den unten aufgeführten Schritten:
+
+## Schritt 1
+
+Erstelle eine Tabelle mit dem Namen `books` mit den folgenden Spalten:
+
+- `id` - SERIAL
+- `title` - TEXT
+- `author` - TEXT
+- `publication_year` - INTEGER
+
+## Schritt 2
+
+Füge das folgende Buch in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/A_Beautifully_Foolish_Endeavor
+
+## Schritt 3
+
+Füge die folgenden Bücher mit einer Abfrage in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/An_Absolutely_Remarkable_Thing
+- https://en.wikipedia.org/wiki/The_Anthropocene_Reviewed#Book
+- https://en.wikipedia.org/wiki/Turtles_All_the_Way_Down_(novel)
+- https://en.wikipedia.org/wiki/Everything_Is_Tuberculosis
+
+## Schritt 4
+
+Wähle alle Daten von allen Büchern in der Tabelle `books` aus.
+
+## Schritt 5
+
+Wähle alle Titel und Autoren von allen Büchern in der Tabelle `books` aus.
+
+# Aufgabe 2
+
+Diese Übung dient dazu, theoretisches Wissen zu üben.
+
+## Fragen
+
+- Frage 1: Wofür steht SQL?
+
+    - secured query language
+
+- Frage 2: Was macht der Datentyp `SERIAL` in PostgreSQL?
+
+    - daten anfragen und hinzufügen
+    - automatisch inkrementieren
+
+- Frage 3: Liste 6 verschiedene Datentypen auf, die in PostgreSQL verfügbar sind.
+    
+    - INTEGER
+    - TEXT
+    - BOOLEAN
+    - DATE
+    - NUMERIC
+    - SERIAL
+
+- Frage 4: Welche Tabellennamen sind für eine PostgreSQL-Tabelle erlaubt? Was ist nicht erlaubt?
+
+    - Erlaubt: alphanumerische Zeichen, Unterstriche, keine Leerzeichen
+    - Nicht erlaubt: Sonderzeichen, mit einer Zahl beginnen
+
+- Frage 5: Was ist falsch mit dem Folgenden: `INSERT pets (name, species, birth year) VALUE 'Veera', 2005`?
+
+    - Es sollte `VALUES` anstelle von `VALUE` sein und die Spaltennamen dürfen keine Leerzeichen enthalten.
+
+- Frage 6: Recherchiere einige Unterschiede zwischen MySQL und PostgreSQL. Liste drei Unterschiede auf. Es ist okay, wenn du nicht alles verstehst, was du liest, gib einfach dein Bestes.
+
+    - MySQL unterstützt keine vollständige ACID-Konformität, während PostgreSQL dies tut.
+    - PostgreSQL bietet erweiterte Datentypen wie JSONB, während MySQL dies nur eingeschränkt tut.
+    - MySQL verwendet standardmäßig die InnoDB-Engine, während PostgreSQL eine eigene, leistungsstarke Engine hat.
+
+- Frage 7: Liste 5 verschiedene NoSQL-Datenbanken auf.
+
+    - MongoDB
+    - Cassandra
+    - Couchbase
+    - Redis
+    - DynamoDB
