@@ -1,3 +1,5 @@
+Aufgabe 02092025
+
 # AUFGABEN UM SQL BEGRIFFE
 
 In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
@@ -142,7 +144,132 @@ In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
 
 
 15. Was ist ein **Primärschlüssel (Primary Key)**?
+dci-student@Lenovo-V15-G4-IRU:~/Selbststudium$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:   git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/dci-student/Selbststudium/.git/
+dci-student@Lenov# Aufgabe 1
 
+Diese Übung dient dazu, grundlegende SQL-Abfragen zu üben.
+
+Deine Aufgabe ist es, eine Tabelle für die Speicherung von Daten über Bücher vorzubereiten und einige Daten einzufügen. Zeichne deine Abfragen und Antworten in der Datei `task-1-books.sql` auf. Folge den unten aufgeführten Schritten:
+
+## Schritt 1
+
+Erstelle eine Tabelle mit dem Namen `books` mit den folgenden Spalten:
+
+- `id` - SERIAL
+- `title` - TEXT
+- `author` - TEXT
+- `publication_year` - INTEGER
+
+## Schritt 2
+
+Füge das folgende Buch in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/A_Beautifully_Foolish_Endeavor
+
+## Schritt 3
+
+Füge die folgenden Bücher mit einer Abfrage in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/An_Absolutely_Remarkable_Thing
+- https://en.wikipedia.org/wiki/The_Anthropocene_Reviewed#Book
+- https://en.wikipedia.org/wiki/Turtles_All_the_Way_Down_(novel)
+- https://en.wikipedia.org/wiki/Everything_Is_Tuberculosis
+
+## Schritt 4
+
+Wähle alle Daten von allen Büchern in der Tabelle `books` aus.
+
+## Schritt 5
+
+Wähle alle Titel und Autoren von allen Büchern in der Tabelle `books` aus.
+
+# Aufgabe 2# Aufgabe 1
+
+Diese Übung dient dazu, grundlegende SQL-Abfragen zu üben.
+
+Deine Aufgabe ist es, eine Tabelle für die Speicherung von Daten über Bücher vorzubereiten und einige Daten einzufügen. Zeichne deine Abfragen und Antworten in der Datei `task-1-books.sql` auf. Folge den unten aufgeführten Schritten:
+
+## Schritt 1
+
+Erstelle eine Tabelle mit dem Namen `books` mit den folgenden Spalten:
+
+- `id` - SERIAL
+- `title` - TEXT
+- `author` - TEXT
+- `publication_year` - INTEGER
+
+## Schritt 2
+
+Füge das folgende Buch in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/A_Beautifully_Foolish_Endeavor
+
+## Schritt 3
+
+Füge die folgenden Bücher mit einer Abfrage in die Tabelle `books` ein:
+
+- https://en.wikipedia.org/wiki/An_Absolutely_Remarkable_Thing
+- https://en.wikipedia.org/wiki/The_Anthropocene_Reviewed#Book
+- https://en.wikipedia.org/wiki/Turtles_All_the_Way_Down_(novel)
+- https://en.wikipedia.org/wiki/Everything_Is_Tuberculosis
+
+## Schritt 4
+
+Wähle alle Daten von allen Büchern in der Tabelle `books` aus.
+
+## Schritt 5
+
+Wähle alle Titel und Autoren von allen Büchern in der Tabelle `books` aus.
+
+# Aufgabe 2
+
+Diese Übung dient dazu, theoretisches Wissen zu üben.
+
+## Fragen
+
+- Frage 1: Wofür steht SQL?
+
+- Frage 2: Was macht der Datentyp `SERIAL` in PostgreSQL?
+
+- Frage 3: Liste 6 verschiedene Datentypen auf, die in PostgreSQL verfügbar sind.
+
+- Frage 4: Welche Tabellennamen sind für eine PostgreSQL-Tabelle erlaubt? Was ist nicht erlaubt?
+
+- Frage 5: Was ist falsch mit dem Folgenden: `INSERT pets (name, species, birth year) VALUE 'Veera', 2005`?
+
+- Frage 6: Recherchiere einige Unterschiede zwischen MySQL und PostgreSQL. Liste drei Unterschiede auf. Es ist okay, wenn du nicht alles verstehst, was du liest, gib einfach dein Bestes.
+
+- Frage 7: Liste 5 verschiedene NoSQL-Datenbanken auf.
+
+Diese Übung dient dazu, theoretisches Wissen zu üben.
+
+## Fragen
+
+- Frage 1: Wofür steht SQL?
+
+- Frage 2: Was macht der Datentyp `SERIAL` in PostgreSQL?
+
+- Frage 3: Liste 6 verschiedene Datentypen auf, die in PostgreSQL verfügbar sind.
+
+- Frage 4: Welche Tabellennamen sind für eine PostgreSQL-Tabelle erlaubt? Was ist nicht erlaubt?
+
+- Frage 5: Was ist falsch mit dem Folgenden: `INSERT pets (name, species, birth year) VALUE 'Veera', 2005`?
+
+- Frage 6: Recherchiere einige Unterschiede zwischen MySQL und PostgreSQL. Liste drei Unterschiede auf. Es ist okay, wenn du nicht alles verstehst, was du liest, gib einfach dein Bestes.
+
+- Frage 7: Liste 5 verschiedene NoSQL-Datenbanken auf.o-V15-G4-IRU:~/Selbststudium$ git add README.de
+fatal: pathspec 'README.de' did not match any files
     Eine Spalte (oder mehrere), 
     die jeden Datensatz eindeutig identifiziert.
 
@@ -224,9 +351,244 @@ In dieser Übung lernst du die wichtigsten Begriffe rund um SQL kennen.
 
 - [PostgreSQL Tutorial](https://neon.com/postgresql/postgresql-getting-started)
 
-- [ERD mit draw.io](https://www.youtube.com/watch?v=lAtCySGDD48)
+- [ERD mit draw.io](
+    
+)
 
+# SQL BEGRIFFE ERKLÄRT
+
+## Such dir die Definitionen und Bedeutungen zu den folgenden Begriffen:
+
+1. **Datenbank**
+
+   - Was ist eine Datenbank?
+   - Ein Ort, wo man Daten speichert (sammelt).
+
+   - ist eine strukturierte Datenbank zb in tabellenform
+
+   - strukturierte Sammlungen von Daten in einem Speicherort
+
+   - Wozu wird eine Datenbank verwendet?
+     - Statische Webseiten brauchen keine Datenbanken.
+     - Dynamische Webseiten brauchen Datenbanken.
+
+2. **SQL**
+   - Structured Query Language
+3. **NoSQL**
+   - Nicht nur SQL (englisch: Not Only SQL)
+4. **Was ist der Hauptunterschied zwischen SQL und NoSQL?**
+   - SQL-Datenbanken verwenden Tabellen, NoSQL-Datenbanken verwenden Dokumente, Graph
+5. ## **Abfrage (Query)**
+
+   - Eine Anweisung, mit der Daten gefiltert, eingefügt,
+     verändert oder gelöscht werden.
+   - CRUD Operationen durchgeführt werden
+     - (Create, Read, Update, Delete)
+     - Create - Daten erstellen (Daten einfügen) - POST
+     - Read - Daten lesen (Daten anzeigen) - GET
+     - Update - Daten verändern (Daten aktualisieren) - PUT/
+       PATCH
+     - Delete - Daten löschen - DELETE
+
+6. **ERD (Entity-Relationship-Diagramm)**
+
+   - Was ist ein ERD?
+     - Ein Diagramm, das zeigt, wie Tabellen und ihre
+       Beziehungen in einer Datenbank aussehen
+   - Wie sieht ein ERD aus?
+     - mehrere kästchen in denen die Datenbanktabellen
+       dargestellt werden
+     - mit Linien verbunden, welche die beziehungen zwischen
+       den Tabellen darstellen
+   - Wozu wird ein ERD verwendet?
+     - Zur Planung und Visualisierung von Datenbanken
+
+7. **Flowcharts**
+
+   - Was ist ein Flowchart?
+     - Ein Diagramm, das den Ablauf eines Prozesses oder
+       Systems darstellt z.B. wie eine "if" Abfrage
+       funktioniert
+   - Wie sieht ein Flowchart aus? [Bilder auf Google suchen](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fv2%2Fresize%3Afit%3A1200%2F1*y7Um00K9CVNAKj6t-s63IQ.jpeg&f=1&nofb=1&ipt=c1ab30ca7a5df050337c4c853876ad5bfaceb69946c180d487798f1c5ac4d77f)
+   - Wozu wird ein Flowchart verwendet?
+     - Zur Planung und Visualisierung von Prozessen und Abläufen
+
+8. **RDBMS (Relational Database Management System)**
+9. Was ist den unterschied zwischen einem RDBMS und ein DBMS? Kanst du Beispiele nennen?
+
+# LIVE CODING SQL - Einführung
+
+Diese Übung dient dazu, grundlegende SQL-Abfragen zu üben.
+
+Deine Aufgabe ist es, eine Tabelle für die Speicherung von Daten über Benutzer vorzubereiten und einige Daten einzufügen. Zeichne deine Abfragen und Antworten in der Datei `task-1-users.sql` auf. Folge den unten aufgeführten Schritten:
+
+## Schritt 1
+
+Erstelle eine Tabelle mit dem Namen `users` mit den folgenden Spalten:
+
+- `id` - SERIAL
+- `name` - TEXT
+- `email` - TEXT
+- `age` - INTEGER
+
+```
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  age INTEGER NOT NULL
+  );
+```
+
+- CSV - Daten im Tabellenformat, durch Kommas getrennt (Comma-Separated Values)
+
+## Schritt 2
+
+Füge den folgenden Benutzer in die Tabelle `users` ein:
+
+- Name: John Doe
+- E-Mail: john.doe@example.com
+- Alter: 30
+
+```
+  INSERT INTO users(name,email, age) VALUES ('John Doe', 'john.doe@example.com', 30)
+```
+
+## Schritt 3
+
+Füge die folgenden Benutzer mit einer Abfrage in die Tabelle `users` ein:
+
+- Name: Jane Smith, E-Mail: jane.smith@example.com, Alter: 25
+- Name: Alice Johnson, E-Mail: alice.johnson@example.com, Alter: 28
+- Name: Bob Brown, E-Mail: bob.brown@example.com, Alter: 35
+
+```
+INSERT INTO users(name,email,age) VALUES( 'Jane Smith', 'jane.smith@example.com', 25),
+('Alice Johnson', 'alice.johnson@example.com', 28),
+( 'Bob Brown', 'bob.brown@example.com', 35);
+```
+
+## Schritt 4
+
+Wähle alle Daten von allen Benutzern in der Tabelle `users` aus.
+
+```
+SELECT * FROM users;
+```
+
+## Schritt 5
+
+Wähle alle Namen und E-Mail-Adressen von allen Benutzern in der Tabelle `users` aus.
+
+```
+SELECT name, email FROM users;
+```
+
+
+Aufgabe 03092025
+
+# Aufgabe 1
+
+Diese Übung dient dazu, grundlegende SQL-Abfragen zu üben.
+
+Deine Aufgabe ist es, eine Tabelle für die Speicherung von Daten über Bücher vorzubereiten und einige Daten einzufügen. Zeichne deine Abfragen und Antworten in der Datei `task-1-books.sql` auf. Folge den unten aufgeführten Schritten:
+
+## Schritt 1
+
+Erstelle eine Tabelle mit dem Namen `books` mit den folgenden Spalten:
+
+CREATE TABLE books (
+    id - SERIAL PRIMARY KEY,
+    title - TEXT,
+    author - TEXT,
+    publication_year - INTEGER
+);
+
+## Schritt 2
+
+Füge das folgende Buch in die Tabelle `books` ein:
+
+INSERT INTO books (title, author, publication_year)
+VALUES ('A Beautifully Foolish Endeavor', 'Hank Green', 2020);
+
+## Schritt 3
+
+Füge die folgenden Bücher mit einer Abfrage in die Tabelle `books` ein:
+
+INSERT INTO books (title, author, publication_year) VALUES
+('An Absolutely Remarkable Thing', 'Hank Green', 2018),
+('The Anthropocene Reviewed', 'John Green', 2021),
+('Turtles All the Way Down', 'John Green', 2017),
+('Everything Is Tuberculosis', 'Unbekannt', NULL);
+
+## Schritt 4
+
+Wähle alle Daten von allen Büchern in der Tabelle `books` aus.
+
+SELECT * FROM books;
+
+## Schritt 5
+
+Wähle alle Titel und Autoren von allen Büchern in der Tabelle `books` aus.
+
+SELECT title, author FROM books;
+
+# Aufgabe 2
+
+Diese Übung dient dazu, theoretisches Wissen zu üben.
+
+## Fragen
+
+- Frage 1: Wofür steht SQL?
+
+    - Structure Querrly Language
+
+- Frage 2: Was macht der Datentyp `SERIAL` in PostgreSQL?
+
+    - Serial wird oft für Primärschlüssel verwendet und erstellt eine fortlaufende Ganzzahl
+
+- Frage 3: Liste 6 verschiedene Datentypen auf, die in PostgreSQL verfügbar sind.
+
+    - INTEGER
+    - TEXT
+    - BOOLEAN
+    - Datei
+    - NUMERIC
+    - VARCHAR
+
+
+- Frage 4: Welche Tabellennamen sind für eine PostgreSQL-Tabelle erlaubt? Was ist nicht erlaubt?
+
+    Erlaubt:        - Buchstaben
+                    - Zahlen
+                    - Unterstriche
+                    - Beginn ohne Zahlen
+
+    nicht Erlaub:   - Leerzeichen
+                    - Sonderzeichen
+                    - reservierte Wörter
+
+- Frage 5: Was ist falsch mit dem Folgenden: `INSERT pets (name, species, birth year) VALUE 'Veera', 2005`?
+
+    - es muss VALUES heißen
+    - die Syntax wird korrekt so geschrieben:
+        INSERT INTO pets (name, species, birth_year) VALUES ('Veera', 'Hund', 2005);
+
+- Frage 6: Recherchiere einige Unterschiede zwischen MySQL und PostgreSQL. Liste drei Unterschiede auf. Es ist okay, wenn du nicht alles verstehst, was du liest, gib einfach dein Bestes.
+
+    - MySQL gehört zu Oracle
+    - PostgreSQL unterstützt fortgeschrittene Features wie Window Functions und Common Table Expressions
+    - ... ist strenger bei SQL-standardisierte
+
+- Frage 7: Liste 5 verschiedene NoSQL-Datenbanken auf.
+
+    - MongoDB
+    - Cassandra
+    - Redis
+    - CouchDB
+    - Neo4j
 
 
 
 Für weitere Infos siehe die verlinkten Ressourcen!
+
