@@ -592,3 +592,158 @@ Diese Übung dient dazu, theoretisches Wissen zu üben.
 
 Für weitere Infos siehe die verlinkten Ressourcen!
 
+
+Aufgabe bis Mo 08092025
+
+# Arbeiten mit einer SQL Datei
+
+## Aufgaben bis Montag
+
+- Erstelle eine neue Ordner in deinem Computer namens `sql-products`
+- Starte Postgres und erstelle eine neue Datenbank namens `products`
+
+### Erstelle eine neue SQL Datei namens `products.sql` in dem Ordner `sql-products`
+
+- In dieser Datei, schreibe den SQL Befehl um eine Tabelle namens `products` mit den folgenden Spalten zu erstellen:
+
+```sql
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    brand VARCHAR(255),
+    model VARCHAR(255),
+    year INTEGER,
+    price_per_day DECIMAL(10, 2) NOT NULL,
+    available BOOLEAN DEFAULT TRUE
+);
+```
+
+- führe die Datei `products.sql` in deiner `test` Datenbank aus wie z.B. mit dem Befehl:
+
+```bash
+psql -U postgres -h localhost -d test -f products.sql
+```
+
+### `inserts.sql` datei erstellen mit javascript erstellen
+
+- füge die von Lehrer bereitgestellten `ceate-inserts.js` datei in den `sql-products` ordner
+- intialisiere ein neues npm projekt mit `npm init -y`
+- in den `package.json` datei, füge `"type": "module",` hinzu. Sollte ungefähr so aussehen:
+
+```json
+{
+  "name": "02-sql-datenbank",
+  "version": "1.0.0",
+  "main": "create-inserts.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+### Starte die Datei `create-inserts.js` mit Node.js
+
+```bash
+node create-inserts.js
+```
+
+- Was siehst du in deinem Ordner?
+
+INSERT INTO products (name, type, brand, model, year, price_per_day, available) VALUES
+('Mountain Bike', 'Fahrrad', 'Cube', 'Aim Pro', 2022, 15.00, TRUE),
+('E-Bike', 'Fahrrad', 'Haibike', 'Sduro', 2021, 25.00, TRUE),
+('Road Bike', 'Fahrrad', 'Specialized', 'Allez', 2020, 18.00, FALSE),
+('Kanu', 'Wassersport', 'Gumotex', 'Solar', 2019, 20.00, TRUE),
+('SUP Board', 'Wassersport', 'Fanatic', 'Fly Air', 2023, 12.50, TRUE);
+
+- Was macht den Code in der `create-inserts.js` Datei?
+
+  - jede zeile fügt die werte der genannten objekte ein
+
+### Erstelle eine neue SQL Datei namens `select-products.sql` in dem Ordner `sql-products`
+
+- In dieser Datei, schreibe die SQL Befehle um die folgenden Informationen aus der `products` Tabelle zu selektieren:
+
+```sql
+SELECT name, type, price_per_day FROM products WHERE available = TRUE;
+```
+
+- führe die Datei `select-products.sql` in deiner `test` Datenbank aus wie z.B. mit dem Befehl:
+
+```bash
+psql -U postgres -h localhost -d test -f select-products.sql
+```
+
+- Was siehst du als Ergebnis?
+
+  ost -d test -f select-products.sql
+  Password for user postgres: 
+   name | type | price_per_day 
+  ------+------+---------------
+  (0 rows)
+
+- kommentiere die erstere Zeile in der `select-products.sql` Datei aus und füge den folgenden SQL Befehl hinzu:
+
+```sql
+SELECT type, COUNT(*) FROM products GROUP BY type;
+```
+
+- führe die Datei `select-products.sql` in deiner `test` Datenbank aus wie z.B. mit dem Befehl:
+
+```bash
+psql -U postgres -h localhost -d test -f select-products.sql
+```
+
+- Was siehst du als Ergebnis?
+
+  - (5 rows)
+
+    ...skipping...
+    id |     name      |    type     |    brand    |  model  | year | price_per_day | available 
+    ----+---------------+-------------+-------------+---------+------+---------------+-----------
+    1 | Mountain Bike | Fahrrad     | Cube        | Aim Pro | 2022 |         15.00 | t
+    2 | E-Bike        | Fahrrad     | Haibike     | Sduro   | 2021 |         25.00 | t
+    3 | Road Bike     | Fahrrad     | Specialized | Allez   | 2020 |         18.00 | f
+    4 | Kanu          | Wassersport | Gumotex     | Solar   | 2019 |         20.00 | t
+    5 | SUP Board     | Wassersport | Fanatic     | Fly Air | 2023 |         12.50 | t
+    (5 rows)
+
+    ~
+    (END)
+
+## Recherchiere folgende SQL Befehle
+
+- `WHERE`
+  - Filtert Datensätze Bsp.: 
+
+      SELECT * FROM products WHERE avaiable = TRUE;
+
+  - werden immer nur für bestimmte Zeilen einer Tabelle verwendet.
+
+- `GROUP BY`
+
+  - Fässt Zeilen mit gleichen Werten in bestimmten Spalten zu Gruppen zusammen
+
+      SELECT type, COUNT(*) FROM products GROUP BY type;
+
+  - bei Berechnung agregierter Werte pro Gruppe (Summen, Durchschnitte, Anzahl)
+
+- `COUNT()`
+
+  - gibt die Anzahl der Zeilen/Werte an
+
+    - SELECT COUNT(*) FROM products WHERE available = TRUE;
+
+
+  - Erkenntnis über Anzahl der Datensätze
+
+- Was machen diese Befehle?
+- Wann werden sie verwendet?
+
+## Bonus
+
+- Versuch die CRUD Operationen (Create, Read, Update, Delete) mit SQL Befehlen zu machen
