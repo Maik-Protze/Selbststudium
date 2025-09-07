@@ -590,6 +590,7 @@ Diese Übung dient dazu, theoretisches Wissen zu üben.
 
 
 
+<<<<<<< HEAD
 Für weitere Infos siehe die verlinkten Ressourcen!
 
 
@@ -715,35 +716,63 @@ psql -U postgres -h localhost -d test -f select-products.sql
     ~
     (END)
 
+
 ## Recherchiere folgende SQL Befehle
 
 - `WHERE`
-  - Filtert Datensätze Bsp.: 
-
-      SELECT * FROM products WHERE avaiable = TRUE;
-
-  - werden immer nur für bestimmte Zeilen einer Tabelle verwendet.
-
 - `GROUP BY`
-
-  - Fässt Zeilen mit gleichen Werten in bestimmten Spalten zu Gruppen zusammen
-
-      SELECT type, COUNT(*) FROM products GROUP BY type;
-
-  - bei Berechnung agregierter Werte pro Gruppe (Summen, Durchschnitte, Anzahl)
-
 - `COUNT()`
-
-  - gibt die Anzahl der Zeilen/Werte an
-
-    - SELECT COUNT(*) FROM products WHERE available = TRUE;
-
-
-  - Erkenntnis über Anzahl der Datensätze
-
 - Was machen diese Befehle?
 - Wann werden sie verwendet?
+
+### WHERE
+Der `WHERE`-Befehl filtert Datensätze nach bestimmten Bedingungen.
+**Beispiel:**
+```sql
+SELECT * FROM products WHERE available = TRUE;
+```
+Verwendung: Immer wenn du nur bestimmte Zeilen aus einer Tabelle auswählen möchtest.
+
+### GROUP BY
+Mit `GROUP BY` werden Zeilen mit gleichen Werten in bestimmten Spalten zu Gruppen zusammengefasst.
+**Beispiel:**
+```sql
+SELECT type, COUNT(*) FROM products GROUP BY type;
+```
+Verwendung: Wenn du aggregierte Werte (z.B. Summen, Durchschnitte, Anzahl) pro Gruppe berechnen willst.
+
+### COUNT()
+`COUNT()` zählt die Anzahl der Zeilen (oder Werte) in einer Gruppe oder Tabelle.
+**Beispiel:**
+```sql
+SELECT COUNT(*) FROM products WHERE available = TRUE;
+```
+Verwendung: Wenn du wissen willst, wie viele Datensätze es gibt (z.B. wie viele Produkte verfügbar sind).
+
+---
+
+## Bonus: CRUD-Operationen mit SQL
+
+- **Create** (Erstellen):
+```sql
+INSERT INTO products (name, type, price_per_day) VALUES ('Testprodukt', 'Fahrrad', 10.00);
+```
+- **Read** (Lesen):
+```sql
+SELECT * FROM products;
+```
+- **Update** (Aktualisieren):
+```sql
+UPDATE products SET price_per_day = 12.00 WHERE name = 'Testprodukt';
+```
+- **Delete** (Löschen):
+```sql
+DELETE FROM products WHERE name = 'Testprodukt';
+```
 
 ## Bonus
 
 - Versuch die CRUD Operationen (Create, Read, Update, Delete) mit SQL Befehlen zu machen
+=======
+Für weitere Infos siehe die verlinkten Ressourcen!
+>>>>>>> a53a4aea42c792aa07584b3159be24983312064b
