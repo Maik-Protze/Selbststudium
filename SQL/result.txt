@@ -1,0 +1,14 @@
+ id |  name  |  species  | birth_year 
+----+--------+-----------+------------
+  1 | Veera  | Katze     |       2005
+  2 | Rauli  | Katze     |       2003
+  3 | Beans  | Frettchen |       2022
+  4 | Cheese | Frettchen |       2021
+  5 | Alpi   | Hund      |       2001
+  6 | Veera  | Katze     |       2005
+  7 | Rauli  | Katze     |       2003
+  8 | Beans  | Frettchen |       2022
+  9 | Cheese | Frettchen |       2021
+ 10 | Alpi   | Hund      |       2001
+(10 rows)
+
